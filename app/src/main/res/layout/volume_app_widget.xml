@@ -1,0 +1,209 @@
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.VolumeWidget.AppWidget.Container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="4"
+    android:rowCount="1"
+    android:padding="10dp"
+    android:background="@drawable/widget_background"
+    android:orientation="horizontal"
+    android:theme="@style/Theme.VolumeWidget.AppWidgetContainer">
+
+    <LinearLayout
+        android:id="@+id/alarm_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/music_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ic_add_alarm_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_add"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:backgroundTint="#1C3A72"
+            android:rotation="180" />
+
+        <TextView
+            android:id="@+id/alarm_text_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:text="80"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/ic_turn_alarm_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_add"
+            android:elevation="4dp"
+            android:backgroundTint="#1C3A72"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/call_system_alarm"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_alarm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/music_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/system_layout"
+        app:layout_constraintStart_toEndOf="@id/alarm_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ic_add_music_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_add"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:backgroundTint="#46A524"
+            android:rotation="180" />
+
+        <TextView
+            android:id="@+id/music_text_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:text="70"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/ic_turn_music_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_add"
+            android:elevation="4dp"
+            android:backgroundTint="#46A524"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/call_system_music"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_music" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/system_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/voice_layout"
+        app:layout_constraintStart_toEndOf="@id/music_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ic_add_system_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_add"
+            android:elevation="4dp"
+            android:backgroundTint="#721C52"
+            android:gravity="center"
+            android:rotation="180" />
+
+        <TextView
+            android:id="@+id/system_text_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:text="60"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/ic_turn_system_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_add"
+            android:elevation="4dp"
+            android:backgroundTint="#721C52"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/call_system_system"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_system" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/voice_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/system_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ic_add_voice_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_add"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:backgroundTint="#8C2424"
+            android:rotation="180" />
+
+        <TextView
+            android:id="@+id/voice_text_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:text="70"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/ic_turn_voice_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_add"
+            android:elevation="4dp"
+            android:backgroundTint="#8C2424"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/call_system_ring"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_ring" />
+    </LinearLayout>
+</GridLayout>
